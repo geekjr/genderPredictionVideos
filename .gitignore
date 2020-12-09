@@ -1,0 +1,5 @@
+*.zip
+*.h5
+.vscode/
+__pycache__/
+gender/
