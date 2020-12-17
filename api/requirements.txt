@@ -1,5 +1,5 @@
 pillow==7.2.0
-tensorflow-cpu==2.3.0
+tensorflow-cpu>=2.4.0
 numpy==1.18.5
 uvicorn==0.12.3
 fastapi==0.61.2
