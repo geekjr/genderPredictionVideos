@@ -1,4 +1,4 @@
-pillow==8.1.1
+pillow==8.2.0
 tensorflow-cpu==2.5.0
 numpy==1.18.5
 uvicorn==0.12.3
