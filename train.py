@@ -37,7 +37,7 @@ train_ds = train_ds.cache().shuffle(1000).prefetch(buffer_size=AUTOTUNE)
 
 val_ds = val_ds.cache().shuffle(1000).prefetch(buffer_size=AUTOTUNE)
 
-normalization_layer = layers.experimental.preprocessing.Rescaling(1./255)
+normalization_layer = layers.experimental.preprocessing.Rescaling(1. / 255)
 
 normalized_ds = train_ds.map(lambda x, y: (normalization_layer(x), y))
 
@@ -61,7 +61,7 @@ data_augmentation = keras.Sequential(
 
 model = Sequential([
     data_augmentation,
-    layers.experimental.preprocessing.Rescaling(1./255),
+    layers.experimental.preprocessing.Rescaling(1. / 255),
     layers.Conv2D(16, 3, padding='same', activation='relu'),
     layers.MaxPooling2D(),
     layers.Conv2D(32, 3, padding='same', activation='relu'),
